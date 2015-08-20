@@ -24,7 +24,8 @@ Description:
 	-q quiet:         silent output
 ```
 
-For example, to build a neural network capable of calculating XOR:
+For example, to build a neural network capable of calculating an XOR function:
+
 ```
 $ cat xor-values.txt | ./ann -n 2,3,1 -d "," -t xor-training.txt -q
 0,0: -0.0714217
