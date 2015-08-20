@@ -27,7 +27,7 @@ void printUsage(int argc, char *argv[]) {
   cout << "-n topology -t training-file [-a alpha] [-e eta] [-i input-file] ";
   cout << "[-d delimiter]" << endl;
   cout << "Description: " << endl;
-  cout << "\t-n topology:      the topology of the network (example: 3;2;1)" << endl;
+  cout << "\t-n topology:      the topology of the network (example: 3,2,1)" << endl;
   cout << "\t-t training-file: file with training data" << endl;
   cout << "\t-a alpha:         the overall training rate (default: 0.5)" << endl;
   cout << "\t-e eta:           multiplier of last weight change (default: 0.15)" << endl;
