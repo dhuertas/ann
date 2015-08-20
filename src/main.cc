@@ -58,6 +58,9 @@ void getArguments(int argc, char *argv[]) {
       sscanf(argv[++i], "%c", &options.delimiter);
     } else if (strcmp("-q", argv[i]) == 0) {
       options.quiet = true;
+    } else if (strcmp("-h", argv[i]) == 0) {
+      printUsage(argc, argv);
+      exit(1);
     }
   }
 }
@@ -175,9 +178,13 @@ int main(int argc, char *argv[]) {
     net.feedForward(inputValues);
     net.getResults(resultValues);
 
+    cout << line << ": ";
+
     for (unsigned i = 0; i < resultValues.size(); ++i) {
       cout << resultValues[i] << (i < resultValues.size() - 1 ? options.delimiter : '\n');
     }
+
+    inputValues.clear();
   }
 
   if (options.input != NULL) {
